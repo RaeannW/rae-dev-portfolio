@@ -1,0 +1,21 @@
+:root {
+    --light-cream: #FCF9F2;
+    --dark-cream: #E6DCCB;
+    --dark-brown: #361C1C;
+    --med-brown: #804C3C;
+    --black: #1C1010;
+    --white: #FFFEFB;
+
+    --border-thin: 2px;
+    --border-medium: 8px;
+    --border-thick: 20px;
+}
+
+hr {
+  border: none;
+  margin: 0;
+}
+
+.borderThin   { border-top: var(--border-thin) solid var(--dark-brown); }
+.borderMedium { border-top: var(--border-medium) solid var(--dark-brown); }
+.borderThick  { border-top: var(--border-thick) solid var(--dark-brown); }
