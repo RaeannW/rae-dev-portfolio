@@ -1,3 +1,4 @@
+import Ornament from "../../ui/Ornament/Ornament";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -8,6 +9,7 @@ export default function Header() {
         <span>Text Left</span>
         <span>Text Right</span>
       </div>
+      <Ornament name="crest-header" className={styles.crest} />
 
       <hr className="borderMedium" />
       <div className={styles.nav}>
@@ -35,6 +37,7 @@ export default function Header() {
         </nav>
 
         <hr className="borderThick" />
+        <Ornament name="medallion" className={styles.medallion} />
       </div>
     </header>
   );
