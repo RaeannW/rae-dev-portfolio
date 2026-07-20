@@ -1,0 +1,60 @@
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 80px;
+  width: 100%;
+  margin-top: 50px;
+}
+.column {
+  min-width: 0;
+  justify-content: flex-end;
+}
+.column:first-child {
+  flex: 1.2;
+}
+.column:last-child {
+  flex: 1;
+}
+.column p {
+  font-size: var(--text-medium);
+  line-height: 1.5;
+}
+.connect {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.contactList {
+  columns: 2;
+  column-gap: 2rem;
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 1rem 0;
+  margin: 0;
+  line-height: 1.5;
+}
+.contactList li {
+  break-inside: avoid;
+}
+.icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  background: var(--dark-brown);
+  border-radius: 50px;
+  margin-right: 0.5rem;
+}
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.imageFrame {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  margin-left: auto;
+}

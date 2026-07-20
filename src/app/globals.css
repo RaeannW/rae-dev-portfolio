@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 :root {
     --light-cream: #FCF9F2;
     --dark-cream: #E6DCCB;
@@ -9,6 +12,13 @@
     --border-thin: 2px;
     --border-medium: 8px;
     --border-thick: 20px;
+
+    --text-small: 0.8rem;
+    --text-medium: 1.05rem;
+    --text-large: 1.25rem;
+    --text-xlarge: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 3rem;
 }
 
 hr {
