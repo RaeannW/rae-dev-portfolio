@@ -1,0 +1,149 @@
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 50px 0;
+  gap: 2.25rem;
+  align-items: stretch;
+}
+.sideColumn,
+.centerColumn {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-medium);
+  line-height: 1.5;
+}
+.sideColumn {
+  flex: 1.5;
+  padding-top: 0;
+  align-items: center;
+  /* background-color: pink; */
+}
+.centerColumn {
+  flex: 2;
+  padding: 02.5rem;
+  background-color: var(--dark-brown);
+  color: var(--light-cream);
+  position: relative;
+}
+.sideColumn h3,
+.centerColumn h3 {
+  text-align: center;
+  font-size: var(--text-xlarge);
+  margin: 0;
+}
+.button {
+  align-self: center;
+  margin-top: auto;
+}
+.centerColumn::before,
+.centerColumn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--dark-brown);
+  pointer-events: none;
+}
+.centerColumn::before {
+  left: -5px;
+}
+.centerColumn::after {
+  right: -5px;
+}
+
+.cornerTL,
+.cornerTR,
+.cornerBL,
+.cornerBR {
+  position: absolute;
+  width: 8rem;
+  height: auto;
+  pointer-events: none;
+}
+.cornerTL {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.cornerTR {
+  top: 0.5rem;
+  right: 0.5rem;
+  transform: scaleX(-1);
+}
+.cornerBL {
+  bottom: 0.5rem;
+  left: 0.5rem;
+  transform: scaleY(-1);
+}
+.cornerBR {
+  bottom: 0.5rem;
+  right: 0.5rem;
+  transform: scale(-1);
+}
+
+.cornerTL svg,
+.cornerTR svg,
+.cornerBL svg,
+.cornerBR svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.imageWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+}
+.imageWrap::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 50%;
+  border: 3px solid var(--dark-brown);
+  background-color: var(--light-cream);
+  z-index: 0;
+}
+.image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+.imageOrnament {
+  z-index: 2;
+  display: block;
+  width: 100%;
+  margin: -40px auto 1rem;
+}
+.imageOrnament svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.maskImage {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  background-color: var(--dark-brown);
+}
+
+.reading {
+  -webkit-mask: url("/images/readingWoman.png") center / contain no-repeat;
+  mask: url("/images/readingWoman.png") center / contain no-repeat;
+}
+
+.writing {
+  -webkit-mask: url("/images/writingWoman.png") center / contain no-repeat;
+  mask: url("/images/writingWoman.png") center / contain no-repeat;
+}
