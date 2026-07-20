@@ -1,0 +1,27 @@
+.button {
+  width: 14rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.dark {
+  background-color: var(--dark-brown);
+  color: var(--white);
+}
+
+.light {
+  background-color: var(--white);
+  color: var(--dark-brown);
+}
+
+.outlined {
+  background-color: transparent;
+  color: var(--dark-brown);
+  border-color: var(--dark-brown);
+}
