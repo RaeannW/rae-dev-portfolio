@@ -11,8 +11,8 @@
   align-items: stretch;
 }
 .nav h1 {
-    text-align: center;
-    margin: 40px 0px;
+  text-align: center;
+  margin: 40px 0px;
 }
 .navLinks ul {
   display: flex;
@@ -43,4 +43,27 @@
   margin: -60px auto;
   width: 100px;
   height: 100px;
+}
+@media (max-width: 768px) {
+  .nav h1 {
+    margin: 24px 0;
+    font-size: var(--text-xlarge);
+  }
+  .navLinks ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    margin: 16px 0;
+  }
+  .crest {
+    width: 80%;
+  }
+  .medallion {
+    width: 70px;
+    height: 70px;
+    margin: -45px auto;
+  }
+  .topText {
+    font-size: var(--text-small);
+  }
 }

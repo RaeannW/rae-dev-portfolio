@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import Image from "next/image";
 import Ornament from "../../ui/Ornament/Ornament";
 import Button from "../../ui/Button/Button";
 
@@ -49,16 +50,29 @@ export default function Hero() {
           <hr className="borderThin" />
         </div>
         <div className={styles.buttonContainer}>
-        <Button variant="dark" className={styles.button}>
-          Get in Touch
-        </Button>
-        <Button variant="dark" className={styles.button}>
-          Download Resume
-        </Button>
+          <Button variant="dark" className={styles.button}>
+            Get in Touch
+          </Button>
+          <Button variant="dark" className={styles.button}>
+            Download Resume
+          </Button>
         </div>
       </div>
       <div className={styles.column}>
-        <Ornament name="image-frame" className={styles.imageFrame} />
+        <div className={styles.frameWrap}>
+          <Ornament name="image-frame" className={styles.imageFrame} />
+          <div className={styles.photoGroup}>
+            <Image
+              src="/images/readingWoman.png"
+              alt="Raeann Hoelker"
+              width={300}
+              height={380}
+              className={styles.photo}
+            />
+            <p className={styles.caption}>Raeann Hoelker</p>
+            <p className={styles.captionSub}>Software Engineer</p>
+          </div>
+        </div>
       </div>
     </div>
   );
