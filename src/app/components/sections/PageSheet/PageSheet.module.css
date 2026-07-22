@@ -1,5 +1,33 @@
 .pageSheet {
-    background-color: var(--dark-cream);
-    margin: 40px;
-    padding: 5rem 180px;
+  background-color: var(--dark-cream);
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 5rem 180px;
+}
+
+@media (max-width: 1200px) {
+  .pageSheet {
+    padding: 5rem 6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pageSheet {
+    padding: 4rem 3rem;
+    margin: 24px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageSheet {
+    padding: 3rem 1.5rem;
+    margin: 16px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageSheet {
+    padding: 2rem 1rem;
+    margin: 8px auto;
+  }
 }

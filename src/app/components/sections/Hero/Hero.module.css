@@ -52,9 +52,90 @@
   gap: 1rem;
   margin-top: 2.5rem;
 }
+.frameWrap {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1354.55 / 2215.52;
+  margin-left: auto;
+  overflow: hidden;
+}
 .imageFrame {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+.imageFrame svg {
   display: block;
   width: 100%;
-  max-width: 450px;
-  margin-left: auto;
+  height: 100%;
+}
+.photoGroup {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18%;
+  gap: 0.2rem;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+.photo {
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 62%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--dark-brown);
+}
+.caption {
+  font-weight: bold;
+  margin: 0.5rem 0 0;
+  text-align: center;
+}
+.captionSub {
+  font-size: var(--text-small);
+  margin: 0;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  .flexContainer {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .imageFrame,
+  .frameWrap {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  .frameWrap {
+    margin: 0 auto;
+    max-width: none;
+    height: min(620px, 65vh);
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .frameWrap {
+    height: min(520px, 60vh);
+  }
+  .contactList {
+    columns: 1;
+    padding: 1rem 0 0;
+  }
+  .buttonContainer {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+  .buttonContainer > * {
+    width: 100%;
+  }
 }

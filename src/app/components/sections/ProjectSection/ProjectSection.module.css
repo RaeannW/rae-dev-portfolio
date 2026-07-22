@@ -121,7 +121,8 @@
   z-index: 2;
   display: block;
   width: 100%;
-  margin: -40px auto 1rem;
+  max-width: 260px;
+  margin: -36px auto 1rem;
 }
 .imageOrnament svg {
   display: block;
@@ -137,7 +138,6 @@
   max-height: 200px;
   background-color: var(--dark-brown);
 }
-
 .reading {
   -webkit-mask: url("/images/readingWoman.png") center / contain no-repeat;
   mask: url("/images/readingWoman.png") center / contain no-repeat;
@@ -146,4 +146,44 @@
 .writing {
   -webkit-mask: url("/images/writingWoman.png") center / contain no-repeat;
   mask: url("/images/writingWoman.png") center / contain no-repeat;
+}
+@media (max-width: 900px) {
+  .flexContainer {
+    flex-direction: column;
+    gap: 3rem;
+    margin: 32px 0;
+  }
+  .centerColumn::before,
+  .centerColumn::after {
+    display: none;
+  }
+  .centerColumn {
+    padding: 2rem;
+  }
+  .cornerTL,
+  .cornerTR,
+  .cornerBL,
+  .cornerBR {
+    width: 5rem;
+  }
+  .imageOrnament {
+    max-width: 220px;
+    margin: -30px auto 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .cornerTL,
+  .cornerTR,
+  .cornerBL,
+  .cornerBR {
+    width: 3.5rem;
+  }
+  .imageWrap {
+    width: 160px;
+    height: 160px;
+  }
+  .maskImage {
+    max-width: 160px;
+    max-height: 160px;
+  }
 }
