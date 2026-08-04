@@ -1,0 +1,78 @@
+.card {
+  position: relative;
+  background-color: var(--light-cream);
+  min-height: 375px;
+}
+.tl,
+.tr,
+.bl,
+.br {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+.tl {
+  top: 0;
+  left: 0;
+}
+.tr {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+.bl {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+.br {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1, -1);
+}
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 2rem 1rem;
+}
+.title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: var(--text-xlarge);
+}
+.colTitle {
+  text-align: center;
+  font-size: var(--text-medium);
+  margin-top: 5px;
+}
+.columns {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  padding: 0 4rem 4rem;
+}
+.textCol {
+  flex: 1;
+  min-width: 0;
+}
+.divider {
+  width: var(--border-thin);
+  background-color: var(--dark-brown);
+  align-self: stretch;
+}
+.textCol p {
+  --line-height: 2rem;
+  line-height: var(--line-height);
+  margin: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--line-height) - 1px),
+    rgba(54, 28, 28, 0.25) calc(var(--line-height) - 1px),
+    rgba(54, 28, 28, 0.25) var(--line-height)
+  );
+  background-position: 0 2rem;
+}

@@ -1,3 +1,4 @@
+import ContactCard from "./components/sections/ContactCard/ContactCard";
 import Header from "./components/sections/Header/Header";
 import Hero from "./components/sections/Hero/Hero";
 import PageSheet from "./components/sections/PageSheet/PageSheet";
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <ProjectSection />
       <SkillsSection />
+      <ContactCard />
     </PageSheet>
 
   );
