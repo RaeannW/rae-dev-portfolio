@@ -1,0 +1,36 @@
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionTitle {
+  display: flex;
+  flex-direction: row;
+  font-size: var(--text-xlarge);
+  text-align: center;
+}
+.sectionIcon {
+  font-size: var(--text-medium);
+}
+.flexSections {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+.sectionContent {
+  flex: 1 1 200px;
+  text-align: center;
+}
+.sectionContent h4 {
+  text-align: center;
+  font-size: var(--text-large);
+  margin: 0;
+}
+.sectionContent ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
